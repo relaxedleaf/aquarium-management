@@ -58,10 +58,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
+  # Use newer nokogiri to avoid glibc compatibility issues
+  gem 'nokogiri', '>= 1.11.0'
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'  # Temporarily commented out - requires PostgreSQL dev libraries
   gem 'rails_12factor'
 end
 
